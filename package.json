@@ -1,0 +1,22 @@
+{
+  "name": "strokerecovery",
+  "version": "2.0.0",
+  "description": "An application that helps people recover after stroke",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adionixitt/StrokeRecovery.git"
+  },
+  "author": "Nikita Novikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Adionixitt/StrokeRecovery/issues"
+  },
+  "homepage": "https://github.com/Adionixitt/StrokeRecovery#readme",
+  "devDependencies": {
+    "electron": "^30.0.8"
+  }
+}
