@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Adionixitt/StrokeRecovery#readme",
   "devDependencies": {
-    "electron": "^30.0.8"
+    "electron": "^30.0.8",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "electron-settings": "^4.0.4"
   }
 }

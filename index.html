@@ -4,26 +4,28 @@
 		<meta charset="UTF-8">
 		<title data-internalization="getStarted-page-title">Recover from stroke</title>
 		<link rel="stylesheet" href="global.css">
-		<script src="scripts/color-scheme.js"></script>
-		<script src="scripts/internalization.js"></script>
+		<script src="scripts/color-scheme.js" type="module"></script>
+		<script src="scripts/internalization.js" type="module"></script>
 	</head>
 	<body>
 		<header>
+			<span></span>
 			<div class="button-container">
 				<Button id="theme-toggle" class="button icon-button"><span class="material-symbols-outlined">dark_mode</span></Button>
-				<Button id="internalization-toggle" class="button icon-button" data-internalization="data-lang">EN</Button>
+				<Button id="internalization-toggle" class="button icon-button"><span class="material-symbols-outlined">language</span></Button>
 			</div>
 		</header>
 		<div id="getstarted-wrapper">
-			<div class="logo">
-				<span class="material-symbols-outlined spin">emergency</span>
-				<div data-internalization="logo-title">Recover from<br>stroke</div>
+			<div class="header">
+				<div class="logo">
+					<span class="material-symbols-outlined spin">emergency</span>
+					<div data-internalization="logo-title">Recover after<br>stroke</div>
+				</div>
+				<p id="app-description" data-internalization="app-description">
+					This application contains simple games and articles that might help you to recover after stroke.
+				</p>
 			</div>
-			<p id="app-description" data-internalization="app-description">
-				This application contains simple games and articles that might help you to recover after stroke.
-			</p>
-			<a href="pages/navigation/navigation.html" target="_self" id="getStartedBtn" class="button"><span data-internalization="get-started">Get started</span><span class="material-symbols-outlined">chevron_right</span></a>
+			<a href="pages/navigation/navigation.html" target="_self" id="getStartedBtn" class="button"><span data-internalization="get-started">Get started</span><span class="material-symbols-outlined">arrow_forward</span></a>
 		</div>
 	</body>
-	<script src="index.js"></script>
 </html>
