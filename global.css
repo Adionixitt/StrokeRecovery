@@ -16,14 +16,15 @@ html{
 
     --bg: #fefefe;
     --bg-secondary: #efefef;
-    --bg-overlay: rgba(33,33,33,0.1);
+    --bg-overlay: rgba(33,33,33,0.05);
     --headings: #101010;
     --text: #212121;
     --text-secondary: #2b2b2b;
     --accent: #2d5ad6;
     --accent-saturated: #285ceb;
     --accent-outline: rgba(40, 92, 235, 0.5);
-    --accent-glow: rgba(40, 92, 235, 0.1);
+    --accent-glow: rgba(40, 92, 235, 0.25);
+    --accent-overlay: rgba(40, 92, 235, 0.1);
     
     transition: all 1s;
 }
@@ -37,7 +38,8 @@ html.dark-theme {
     --accent: #0a46eb;
     --accent-saturated: #0044ff;
     --accent-outline: rgba(0, 68, 255, 0.5);
-    --accent-glow: rgba(0, 68, 255, 0.1);
+    --accent-glow: rgba(0, 68, 255, 0.25);
+    --accent-overlay: rgba(40, 92, 235, 0.1);
     transition: all 1s;
 }
 
@@ -46,6 +48,18 @@ body{
 }
 h1,h2,h3,h4,h5,h6{color: var(--headings);}
 p,div,span{color: var(--text)}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-saturated);
+    border-radius: 10px;
+}
 
 
 .material-symbols-outlined {
@@ -109,7 +123,6 @@ p,div,span{color: var(--text)}
     font-size: 16px;
     font-weight: 700;
     outline: 2px solid transparent;
-    box-shadow: 0 0 15px 1px transparent;
     transition: 0.25s ease-out;
     gap: 5px;
 }
@@ -118,7 +131,6 @@ p,div,span{color: var(--text)}
     --text-color: var(--white);
     --bg-color: var(--accent-saturated);
     outline: 2px solid var(--accent-outline);
-    box-shadow: 0 0 25px 1px var(--accent-outline);
 }
 .button:not(:disabled):hover{
     cursor: pointer;
@@ -150,7 +162,6 @@ p,div,span{color: var(--text)}
     gap: 5px;
 }
 
-
 header{
     display: flex;
     align-items: center;
@@ -161,11 +172,6 @@ header{
     width: 100vw;
     padding: 10px;
     z-index: 1;
-    animation: flyFromTop;
-    animation-duration: 1s;
-    animation-delay: 1.25s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
 }
 @keyframes flyFromTop {
     0%{
@@ -225,11 +231,23 @@ header{
 }
 #getStartedBtn{
     margin-top: 25px;
-    animation: flyFromBottom;
+    animation: getStartedBtnFlyIn;
     animation-duration: 1s;
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-fill-mode: both;
+}
+@keyframes getStartedBtnFlyIn{
+    0%{
+        box-shadow: 0 0 15px 1px transparent;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        box-shadow: 0 0 25px 1px var(--accent-glow);
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 @keyframes flyFromBottom {
     0%{
@@ -244,10 +262,45 @@ header{
 
 .content{
     display: flex;
+    flex-direction: column;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
+    padding: 32px;
     background-color: var(--bg-secondary);
     width: 100vw;
     margin-top: 64px;
     height: calc(100vh - 64px);
+    gap: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+section > nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.card{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    background-color: var(--bg-overlay);
+}
+.card:hover{background-color: var(--accent-overlay);}
+.card:hover > *{color: var(--accent);}
+.card > .material-symbols-outlined{
+    font-size: 48px;
 }
