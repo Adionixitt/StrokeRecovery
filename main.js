@@ -7,11 +7,11 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 720,
     height: 720,
-    minWidth: 720,
-    minHeight: 720,
+    minWidth: 480,
+    minHeight: 480,
     devTools: false,
     autoHideMenuBar: true,
-    maximizable: false,
+    maximizable: true,
     webPreferences: {
       enableRemoteModule: true,
       nodeIntegration: true  // Разрешение на использование node.js API в рендерере

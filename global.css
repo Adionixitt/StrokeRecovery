@@ -14,8 +14,8 @@ html{
     --white: #fefefe;
     --black: #101010;
 
-    --bg: #fefefe;
-    --bg-secondary: #efefef;
+    --bg: #efefef;
+    --bg-secondary: #fefefe;
     --bg-overlay: rgba(33,33,33,0.05);
     --headings: #101010;
     --text: #212121;
@@ -31,7 +31,7 @@ html{
 html.dark-theme {
     --bg: #101010;
     --bg-secondary: #1c1c1c;
-    --bg-overlay: rgba(254,254,254,0.1);
+    --bg-overlay: rgba(254,254,254,0.05);
     --headings: #fefefe;
     --text: #efefef;
     --text-secondary: #e0e0e0;
@@ -51,6 +51,7 @@ p,div,span{color: var(--text)}
 
 ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
 }
 ::-webkit-scrollbar-track {
     background-color: transparent;
@@ -95,17 +96,7 @@ p,div,span{color: var(--text)}
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(0deg);
-    }
-    20%, 100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 .button{
     --text-color: var(--white);
@@ -173,16 +164,7 @@ header{
     padding: 10px;
     z-index: 1;
 }
-@keyframes flyFromTop {
-    0%{
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+
 
 #getstarted-wrapper{
     display: flex;
@@ -218,17 +200,7 @@ header{
     max-height: 250px;
     opacity: 1;
 }
-@keyframes uncollapse{
-    0%{
-        max-height: 0px;
-        opacity: 0;
-    }
-    100%{
-        max-height: 250px;
-        opacity: 1;
-    }
-    
-}
+
 #getStartedBtn{
     margin-top: 25px;
     animation: getStartedBtnFlyIn;
@@ -236,28 +208,6 @@ header{
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-fill-mode: both;
-}
-@keyframes getStartedBtnFlyIn{
-    0%{
-        box-shadow: 0 0 15px 1px transparent;
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    100%{
-        box-shadow: 0 0 25px 1px var(--accent-glow);
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes flyFromBottom {
-    0%{
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .content{
@@ -281,8 +231,22 @@ section{
 }
 section > nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+}
+@media screen and (min-width: 880px){
+    section > nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 700px){
+    section > nav {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
 }
 
 .card{
@@ -294,13 +258,161 @@ section > nav {
     gap: 25px;
     padding: 25px;
     border-radius: 12px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text);
     background-color: var(--bg-overlay);
 }
+.card > .material-symbols-outlined{ font-size: 56px; }
+.card:hover > .material-symbols-outlined{color: var(--accent);}
 .card:hover{background-color: var(--accent-overlay);}
-.card:hover > *{color: var(--accent);}
-.card > .material-symbols-outlined{
-    font-size: 48px;
+
+
+.popup-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: 999;
+    cursor: pointer;
+    overflow: hidden;
+    animation: softBlur;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.popup-wrapper > * {
+    cursor: default;
+}
+.popup-wrapper > .button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.popup-container{
+    display: inline-flex;
+    flex-direction: column;
+    width: 50vw;
+    min-width: 450px;
+    max-width: 500px;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: var(--bg-secondary);
+    gap: 15px;
+    z-index: 9999;
+    animation: flyFromTop;
+    animation-duration: 1s;
+}
+.popup-container > .popup-content{
+    color: var(--text-secondary);
+    gap: 10px;
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.popup-content > *{color: var(--text-secondary);}
+.heading-container{
+    display: flex;
+    color: var(--headings);
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+.heading-container > span.material-symbols-outlined{
+    font-size: 24px;
+}
+.heading-container > h1{
+    font-size: 24px;
+}
+
+
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    20%, 100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes flyFromTop {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes uncollapse{
+    0%{
+        max-height: 0px;
+        opacity: 0;
+    }
+    100%{
+        max-height: 250px;
+        opacity: 1;
+    }
+    
+}
+@keyframes getStartedBtnFlyIn{
+    0%{
+        box-shadow: 0 0 15px 1px transparent;
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        box-shadow: 0 0 25px 1px var(--accent-glow);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes flyFromBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(100%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes flyToBottom {
+    0%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+@keyframes softBlur{
+    0%{
+        backdrop-filter: blur(0px);
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%{
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@keyframes softUnblur{
+    0%{
+        backdrop-filter: blur(15px);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    100%{
+        backdrop-filter: blur(0px);
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
