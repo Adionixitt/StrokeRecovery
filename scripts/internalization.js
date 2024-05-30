@@ -27,7 +27,15 @@ const translation = {
         "simon-status-fail": "Oops! It seems like you tapped the wrong tile. Try again.",
         "simon-status-congrats": "Congrats! You passed all levels!",
         "simon-status-right-tap": "Thats right, go on!",
-
+        "match-game-page-title": "Recover from stroke | Match pairs game",
+        "match-popup-title": "Match pairs",
+        "match-popup-text": "Matching games are games that require players to match similar elements. Participants need to find a match for a word, picture, or card. For example, students place 30 word cards; composed of 15 pairs, face down in random order. Each person turns over two cards at a time, with the goal of turning over a matching pair, by using their memory.",
+        "match-status-time": "Time",
+        "match-game-reset-btn": "Restart",
+        "match-win-popup-title": "You won!",
+        "match-win-popup-text": 'You matched all the cards, the game is ended. Press "Restart" to play again!',
+        "": "",
+        "": "",
     },
     "ru":{
         "logo-title": "Восстановление<br>после инсульта",
@@ -57,6 +65,15 @@ const translation = {
         "simon-status-fail": "Ой! Кажется вы нажали не на ту кнопку. Попробуйте снова.",
         "simon-status-congrats": "Поздравляем, вы прошли все уровни!",
         "simon-status-right-tap": "Верно, продолжайте!",
+        "match-game-page-title": 'Восстановление после инсульта | Игра "Поиск пары"',
+        "match-popup-title": "Поиск пары",
+        "match-popup-text": "Игры на соответствие - это игры, в которых игрокам нужно сопоставить похожие элементы. Участникам нужно найти пару для слова, картинки или карточки. Например, учащиеся раскладывают 30 карточек со словами, состоящих из 15 пар, лицевой стороной вниз в случайном порядке. Каждый человек переворачивает по две карточки за раз, ставя перед собой цель найти подходящую пару, используя свою память. ",
+        "match-status-time": "Время",
+        "match-game-reset-btn": "Перезапустить",
+        "match-win-popup-title": "Победа!",
+        "match-win-popup-text": 'Вы открыли все пары, игра окончена. Нажмите "Перезапустить" чтобы сыграть ещё раз!',
+        "": "",
+        "": "",
     }
 };
 let lang = localStorage.getItem('lang') || 'en' // Загрузка сохраненного языка из localStorage или установка значения по умолчанию 'en'

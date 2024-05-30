@@ -1,12 +1,3 @@
-#simon-bar{
-    display: inline-flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--bg-overlay);
-    padding: 10px;
-    border-radius: 5px;
-}
 #status-text{
     padding: 0 10px;
 }

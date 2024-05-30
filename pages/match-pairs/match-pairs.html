@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title data-internalization="simon-game-page-title">Recover from stroke | Simon game</title>
+		<title data-internalization="match-game-page-title">Recover from stroke | Match pairs game</title>
 		<link rel="stylesheet" href="../../global.css">
 		<script type="module" src="../../scripts/color-scheme.js"></script>
 		<script type="module" src="../../scripts/internalization.js"></script>
 		<script type="module" src="../../scripts/popup.js"></script>
-		<link rel="stylesheet" href="simon.css">
-		<script type="module" src="simon.js"></script>
+		<link rel="stylesheet" href="match-pairs.css">
+		<script type="module" src="match-pairs.js"></script>
 	</head>
 	<body>
 		<header>
@@ -26,36 +26,13 @@
 			</div>
 		</header>
 		<div class="content">
-			<div class="toolbar">
-				<div class="button-container">
-					<button data-internalization="simon-start-btn" class="button" id="btn-start">Start</button>
-				</div>
-				<h4 id="status-text"></h4>
+            <div class="toolbar">
+                <button class="button" data-internalization="match-game-reset-btn" id="restart-btn">Restart</button>
 			</div>
-			<div id="simon-deck">
-				<div data-tile="red"></div>
-				<div data-tile="green"></div>
-				<div data-tile="yellow"></div>
-				<div data-tile="blue"></div>
-			</div>
-		</div>
-		<audio
-			src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"
-			data-sound="red"
-		></audio>
-		<audio
-			src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"
-			data-sound="green"
-		></audio>
-		<audio
-			src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"
-			data-sound="blue"
-		></audio>
-		<audio
-			src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
-			data-sound="yellow"
-		></audio>
-	</body>
+            <div id="deck">
+
+            </div>
+        </div>
 	<script type="module">
 		import getTranslation from "../../scripts/internalization.js";
 		import Popup from "../../scripts/popup.js";
@@ -63,9 +40,9 @@
 		document.addEventListener('DOMContentLoaded', ()=>{
 			document.querySelector('#infoButton').addEventListener('click', ()=>{
 				const popup = new Popup({
-					title: getTranslation("simon-popup-title"),
-					contents: getTranslation("simon-popup-text"),
-					icon: "grid_view"
+					title: getTranslation("match-popup-title"),
+					contents: getTranslation("match-popup-text"),
+					icon: "splitscreen_right"
 				});
 				popup.Show();
 			});
