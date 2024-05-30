@@ -16,6 +16,18 @@ const translation = {
         "about-popup-text": "<p><b>Stroke recovery</b> was maded in 2024 by Nikita Novkiov to help people recover after stroke faster.</p><p>The app was builded by just HTML, CSS, JS and Electron framework.</p><p>By playing simple games patients will feel better and train skills such as emotions and colors recognition, and hand motor skills. Also this games train memory capacity.</p>",
         "menu-popup-title": "Menu page",
         "menu-popup-text": "<p>This page will help you to navigate through all of the games and articles that we have.</p><p>Just choose what you interested - games or article. Want to play games? - We made 6 just for you.</p>",
+        "simon-game-page-title": "Recover from stroke | Simon game",
+        "simon-popup-title": "Simon game",
+        "simon-popup-text": "Simon is an electronic game of short-term memory skill.<br>The device has four colored buttons, each producing a particular tone when it is pressed or activated by the device. A round in the game consists of the device lighting up one or more buttons in a random order, after which the player must reproduce that order by pressing the buttons. As the game progresses, the number of buttons to be pressed increases.",
+        "simon-start-btn": "Start",
+        "simon-score-text": "Score",
+        "simon-status-not-started": "Press Start to begin",
+        "simon-status-taps-left": "Taps left",
+        "simon-status-wait-for-computer": "Wait for the computer turn",
+        "simon-status-fail": "Oops! It seems like you tapped the wrong tile. Try again.",
+        "simon-status-congrats": "Congrats! You passed all levels!",
+        "simon-status-right-tap": "Thats right, go on!",
+
     },
     "ru":{
         "logo-title": "Восстановление<br>после инсульта",
@@ -34,6 +46,17 @@ const translation = {
         "about-popup-text": "<p>Программа <b>Восстановление после инсульта</b> была создана в 2024 году Никитой Новиковым для помощи в скорейшем восстановлении людям, пережившим инсульт.</p><p>Программа создана с помощью языков HTML, CSS, JS и фреймворка Electron.</p><p>Благодаря простым играм пациенты будут чувствовать себя лучше и тренировать такие навыки как: определение цветов и эмоций на лицах, а также моторные навыки рук. Более того, данные игры помогают восстанавливаться памяти пациента.</p>",
         "menu-popup-title": "Навигация",
         "menu-popup-text": "<p>Данная страница поможет вам соориентироваться во всех играх и статьях что имеются.</p><p>Просто выбирайте - игры или статьи. Хотите потренироваться в играх? - Мы создали 6, специально для вас.</p>",
+        "simon-game-page-title": 'Восстановление после инсульта | Игра "Саймон"',
+        "simon-popup-title": 'Игра "Саймон"',
+        "simon-popup-text": "Simon - это электронная игра на развитие кратковременной памяти.<br> Устройство имеет четыре цветные кнопки, каждая из которых издает определенный тон при нажатии или активации устройством. Раунд игры состоит в том, что устройство зажигает одну или несколько кнопок в случайном порядке, после чего игрок должен воспроизвести этот порядок, нажимая на кнопки. По мере прохождения игры количество кнопок, которые нужно нажать, увеличивается.",
+        "simon-start-btn": "Начать",
+        "simon-score-text": "Счёт",
+        "simon-status-not-started": 'Нажмите "Старт" для начала',
+        "simon-status-taps-left": "Осталось нажатий",
+        "simon-status-wait-for-computer": "Дождитесь хода компьютера",
+        "simon-status-fail": "Ой! Кажется вы нажали не на ту кнопку. Попробуйте снова.",
+        "simon-status-congrats": "Поздравляем, вы прошли все уровни!",
+        "simon-status-right-tap": "Верно, продолжайте!",
     }
 };
 let lang = localStorage.getItem('lang') || 'en' // Загрузка сохраненного языка из localStorage или установка значения по умолчанию 'en'

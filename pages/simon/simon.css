@@ -1,0 +1,46 @@
+#simon-bar{
+    display: inline-flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-overlay);
+    padding: 10px;
+    border-radius: 5px;
+}
+#status-text{
+    padding: 0 10px;
+}
+
+#simon-deck{
+    margin: 0 auto;
+    display: grid;
+    width: 300px; height: 300px;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 150px 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+#simon-deck > div{
+    cursor: pointer;
+}
+#simon-deck:not(.unclickable) > div:hover{
+    filter: saturate(0.75)
+}
+#simon-deck > div.activated{
+    background-color: var(--bg-overlay)!important;
+}
+#simon-deck > div:nth-child(1){
+    background-color: var(--red);
+}
+#simon-deck > div:nth-child(2){
+    background-color: var(--green);
+}
+#simon-deck > div:nth-child(3){
+    background-color: var(--yellow);
+}
+#simon-deck > div:nth-child(4){
+    background-color: var(--blue);
+}
+.unclickable{
+    pointer-events: none;
+}
