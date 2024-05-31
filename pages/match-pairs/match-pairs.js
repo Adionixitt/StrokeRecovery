@@ -12,6 +12,8 @@ const allEmojis = [
     '🎮', '🕹️', '🎳', '🏓', '⚽', '🏀', // Виды спорта
     '🎭', '🎨', '🎬', '🎤', '🎼', '🎸', // Искусство
     '📚', '🖋️', '📝', '📖', '📕', '📗', // Образование
+    //
+    '💐','🍏','🦾','🍌','🍅','🧀', '🍫', '🥕', '🍿', '🍓', '✨', '🧩', '🎲', '🧶', '🌈'
 ];
 let emojis = [];
 const deckSize = 4;
@@ -84,7 +86,7 @@ function checkForWin(){
         const popup = new Popup({
             title: getTranslation("match-win-popup-title"),
             contents: getTranslation("match-win-popup-text"),
-            icon: "military_tech"
+            icon: "trophy"
         });
         popup.Show();
     }
