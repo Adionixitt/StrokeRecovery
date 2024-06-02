@@ -1,0 +1,34 @@
+#field{
+    background-color: var(--bg);
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    box-sizing: border-box;
+    gap: 10px;
+    margin: 0 auto;
+}
+.cell {
+    color: #333;
+    font-weight: 900;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.cell.animating {
+    transition: transform 0.3s ease;
+}
+
+
+.cell.win-cell {
+    background-color: #ffeb3b; /* Цвет выигрышной плитки */
+}
+
+.cell.empty-cell {
+    color: #eee; /* Скрыть текст пустой плитки */
+}

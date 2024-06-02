@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-internalization="2048-game-page-title">Recover from stroke | 2048</title>
+    <link rel="stylesheet" href="../../global.css">
+    <script type="module" src="../../scripts/color-scheme.js"></script>
+    <script type="module" src="../../scripts/internalization.js"></script>
+    <script type="module" src="../../scripts/popup.js"></script>
+    <link rel="stylesheet" href="2048.css">
+    <script type="module" src="2048.js"></script>
+</head>
+<body>
+<header>
+    <div class="button-container">
+        <a href="../navigation/navigation.html" class="button icon-button"><span class="material-symbols-outlined">arrow_back</span></a>
+        <Button class="button icon-button" id="infoButton"><span class="material-symbols-outlined">info</span></Button>
+    </div>
+    <div class="logo logo-sm">
+        <span class="material-symbols-outlined spin">emergency</span>
+        <div data-internalization="logo-title">Recover after<br>stroke</div>
+    </div>
+    <div class="button-container">
+        <Button id="theme-toggle" class="button icon-button"><span class="material-symbols-outlined">dark_mode</span></Button>
+        <Button id="internalization-toggle" class="button icon-button"><span class="material-symbols-outlined">language</span></Button>
+    </div>
+</header>
+<div class="content">
+    <div class="toolbar">
+        <button class="button" data-internalization="2048-game-reset-btn" id="restart-btn">Restart</button>
+    </div>
+    <div id="field">
+        
+    </div>
+</div>
+<script type="module">
+    import getTranslation from "../../scripts/internalization.js";
+    import Popup from "../../scripts/popup.js";
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+        document.querySelector('#infoButton').addEventListener('click', ()=>{
+            const popup = new Popup({
+                title: getTranslation("2048-popup-title"),
+                contents: getTranslation("2048-popup-text"),
+                icon: "background_grid_small"
+            });
+            popup.Show();
+        });
+    });
+</script>
+</body>
+</html>
+
