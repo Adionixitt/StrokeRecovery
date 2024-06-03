@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, globalShortcut } = require('electron');
 const fs = require('fs');
 
 let mainWindow;
@@ -26,6 +26,12 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+  globalShortcut.register('Control+Shift+I', () => {
+    // When the user presses Ctrl + Shift + I, this function will get called
+    // You can modify this function to do other things, but if you just want
+    // to disable the shortcut, you can just return false
+    return false;
+  });
   createWindow();
 
   app.on('activate', () => {

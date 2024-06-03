@@ -4,7 +4,8 @@
   "description": "An application that helps people recover after stroke",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager ./ RecoveryAfterStroke --overwrite --platform=win32 --arch=x64 --out=builds/win --icon=AppIcon.ico"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,10 @@
   },
   "homepage": "https://github.com/Adionixitt/StrokeRecovery#readme",
   "devDependencies": {
+    "@electron-forge/publisher-github": "^7.4.0",
     "electron": "^30.0.8",
+    "electron-packager": "^17.1.2",
+    "electron-prebuilt-compile": "",
     "typescript": "^5.4.5"
   },
   "dependencies": {
