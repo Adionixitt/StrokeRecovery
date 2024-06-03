@@ -1,0 +1,17 @@
+.content{
+    align-items: center;
+    justify-content: center;
+}
+.toolbar > P{
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+.colorDot{
+    display: flex;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid var(--text-secondary);
+    background-color: var(--text-secondary);
+    cursor: pointer;
+}

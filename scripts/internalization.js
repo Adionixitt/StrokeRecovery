@@ -57,7 +57,15 @@ const translation = {
         "face-recognition-emotion-sad": "Sad",
         "face-recognition-emotion-happy": "Happy",
         "face-recognition-emotion-shocked": "Shocked",
-
+        "color-recognition-page-title": "Recover from stroke | Color recognition",
+        "color-recognition-popup-title": "Color recognition",
+        "color-recognition-popup-text": "The game, which requires the user to choose the correct color from two given ones, may have potential as a cognitive rehabilitation exercise for people who have suffered a stroke. Here's how it can be useful: <ul><li><b>Improving attention and concentration</b>: The game requires the player to carefully look at two colors presented and decide which one is closer to a certain color. This exercise can help improve the ability to focus and concentrate.</li><b>Development of logical thinking</b>: The user needs to analyze colors and make decisions based on their shades. This can help develop logical thinking and spatial awareness.<li><b>Brain stimulation</b>: Participating in these games can help stimulate brain activity and improve neural connections, which is beneficial for recovery after a stroke.</li>< li><b>Increasing self-esteem and confidence</b>: Successfully completing levels or answering correctly can increase self-esteem and confidence in players, which is important for psychological well-being.</li></ul>",
+        "color-recognition-choose-this-color": "Choose this color",
+        "or-text": "or",
+        "color-recognition-popup-correct-title": "You're right!",
+        "color-recognition-popup-correct-text": "Color that you selected was right!",
+        "color-recognition-popup-incorrect-title": "Not really!",
+        "color-recognition-popup-incorrect-text": "Suddenly, you selected the wrong color, try again!",
     },
     "ru":{
         "logo-title": "Восстановление<br>после инсульта",
@@ -117,6 +125,15 @@ const translation = {
         "face-recognition-emotion-sad": "Грусть",
         "face-recognition-emotion-happy": "Счастье",
         "face-recognition-emotion-shocked": "Шок",
+        "color-recognition-game-page-title": "Восстановление после инсульта | Распознование цветов",
+        "color-recognition-popup-title": "Распознование цветов",
+        "color-recognition-popup-text": "Игра, в которой пользователю нужно выбирать правильный цвет из двух предложенных, может иметь потенциал в качестве упражнения для восстановления когнитивных функций у людей, перенесших инсульт. Вот как это может быть полезно: <ul><li><b>Улучшение внимания и концентрации</b>: Игра требует от игрока внимательно рассматривать два предложенных цвета и принимать решение о том, какой из них ближе к определенному цвету. Это упражнение может помочь улучшить умение фокусироваться и концентрироваться.</li><b>Развитие логического мышления</b>: Пользователю нужно анализировать цвета и принимать решение на основе их оттенков. Это может способствовать развитию логического мышления и пространственного восприятия.<li><b>Стимуляция мозговой деятельности</b>: Участие в таких играх может способствовать стимуляции мозговой активности и улучшению нейронных связей, что полезно для восстановления после инсульта.</li><li><b>Повышение самооценки и уверенности</b>: Успешное прохождение уровней или правильные ответы могут повысить самооценку и уверенность у игроков, что важно для психологического благополучия.</li></ul>",
+        "color-recognition-choose-this-color": "Выберите этот цвет",
+        "or-text": "или",
+        "color-recognition-popup-correct-title": "Вы правы!",
+        "color-recognition-popup-correct-text": "Вы выбрали правильный цвет!",
+        "color-recognition-popup-incorrect-title": "Не совсем!",
+        "color-recognition-popup-incorrect-text": "К сожалению вы выбрали не тот цвет, попробуйте ещё раз!",
     }
 };
 let lang = localStorage.getItem('lang') || 'en' // Загрузка сохраненного языка из localStorage или установка значения по умолчанию 'en'
