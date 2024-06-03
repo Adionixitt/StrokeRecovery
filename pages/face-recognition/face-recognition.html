@@ -26,7 +26,16 @@
     </div>
 </header>
 <div class="content">
-    
+    <div id="face-wrapper">
+        <img src="./src/happy7.jpeg" alt="face-expression">
+    </div>
+    <h4><span data-internalization="face-recognition-choose-emotion-text">Choose an emotion displayed on the picture above</span>:</h4>
+    <div class="toolbar">
+        <Button class="button quiz-btn" data-internalization="face-recognition-emotion-angry" data-emotion="angry">Angry</Button>
+        <Button class="button quiz-btn" data-internalization="face-recognition-emotion-happy" data-emotion="happy">Happy</Button>
+        <Button class="button quiz-btn" data-internalization="face-recognition-emotion-sad" data-emotion="sad">Sad</Button>
+        <Button class="button quiz-btn" data-internalization="face-recognition-emotion-shocked" data-emotion="shocked">Shocked</Button>
+    </div>
 </div>
 <script type="module">
     import getTranslation from "../../scripts/internalization.js";

@@ -48,6 +48,16 @@ const translation = {
         "face-recognition-page-title": "Recover from stroke | Face recognition",
         "face-recognition-popup-title": "Face recognition",
         "face-recognition-popup-text": "Using face/emotion recognition technology in games can actually be quite beneficial for stroke patients during their recovery process. Here's how it can help: <ul><li><b>Facial expression practice</b>: By playing a game that involves recognizing and mimicking various facial expressions, patients can practice using the muscles in their face that may have been affected by the stroke. This can help in retraining those muscles and improving overall facial mobility and expression.</li><li><b>Emotional recognition training</b>: Recognizing and interpreting emotions in others' facial expressions can be challenging for some stroke patients. A game that focuses on this aspect can help improve their emotional intelligence and ability to correctly interpret social cues, which can be important for communication and social interactions.</li><li><b>Cognitive rehabilitation</b>: Games that incorporate face/emotion recognition can also help with cognitive rehabilitation. They can improve memory, attention, and problem-solving skills, which are often affected by strokes.</li><li><b>Motivation and engagement</b>: Games are inherently interactive and engaging, which can help motivate patients to participate in their rehabilitation exercises consistently. The fun element of gaming can make the rehabilitation process more enjoyable and encourage patients to put in the effort needed for recovery.</li><li><b>Monitoring progress</b>: Face/emotion recognition games can track patients' progress over time, providing valuable data to healthcare providers about their recovery journey. This data can help tailor the rehabilitation program to the specific needs of each patient and make necessary adjustments as they progress.</li></ul>",
+        "face-recognition-choose-emotion-text": "Choose an emotion displayed on the picture above",
+        "face-recognition-popup-correct-title": "You're right!",
+        "face-recognition-popup-correct-text": "Person expression on this picture was ",
+        "face-recognition-popup-incorrect-title": "Not really!",
+        "face-recognition-popup-incorrect-text": "Person expression on this picture was ",
+        "face-recognition-emotion-angry": "Angry",
+        "face-recognition-emotion-sad": "Sad",
+        "face-recognition-emotion-happy": "Happy",
+        "face-recognition-emotion-shocked": "Shocked",
+
     },
     "ru":{
         "logo-title": "Восстановление<br>после инсульта",
@@ -98,6 +108,15 @@ const translation = {
         "face-recognition-page-title": "Восстановление после инсульта | Распознавание лиц",
         "face-recognition-popup-title": "Распознавание лиц",
         "face-recognition-popup-text": "Использование технологии распознавания лиц/эмоций в играх может оказаться весьма полезным для пациентов, перенесших инсульт, в процессе их выздоровления. Вот чем это может помочь: <ul><li><b>Практика выражения лица</b>: играя в игру, которая включает в себя распознавание и имитацию различных выражений лица, пациенты могут практиковаться в использовании мышц лица, которые могли быть затронуты. по инсульту. Это может помочь в перетренировке этих мышц и улучшении общей подвижности и выражения лица.</li><li><b>Тренировка распознавания эмоций</b>. Распознавание и интерпретация эмоций в выражениях лица других людей может быть сложной задачей для некоторых пациентов, перенесших инсульт. Игра, в которой основное внимание уделяется этому аспекту, может помочь улучшить их эмоциональный интеллект и способность правильно интерпретировать социальные сигналы, что может быть важно для общения и социального взаимодействия.</li><li><b>Когнитивная реабилитация</b>: игры, которые включение распознавания лиц/эмоций также может помочь в когнитивной реабилитации. Они могут улучшить память, внимание и навыки решения проблем, на которые часто влияет инсульт.</li><li><b>Мотивация и вовлеченность</b>. Игры по своей сути интерактивны и увлекательны, что может помочь мотивировать пациентов. регулярно участвовать в реабилитационных упражнениях. Развлекательный элемент игры может сделать процесс реабилитации более приятным и побудить пациентов приложить усилия, необходимые для выздоровления.</li><li><b>Отслеживание прогресса</b>. Игры с распознаванием лиц и эмоций позволяют отслеживать поведение пациентов. прогресс с течением времени, предоставляя поставщикам медицинских услуг ценные данные об их пути к выздоровлению. Эти данные могут помочь адаптировать программу реабилитации к конкретным потребностям каждого пациента и вносить необходимые корректировки по мере их продвижения.</li></ul>",
+        "face-recognition-choose-emotion-text": "Из вариантов эмоций, предложенных ниже, выберите ту, которая соответствует человеку на фото выше",
+        "face-recognition-popup-correct-title": "Вы правы!",
+        "face-recognition-popup-correct-text": "Эмоция человека на фото, действительно ",
+        "face-recognition-popup-incorrect-title": "Не совсем!",
+        "face-recognition-popup-incorrect-text": "Эмоция человека на фото была ",
+        "face-recognition-emotion-angry": "Злость",
+        "face-recognition-emotion-sad": "Грусть",
+        "face-recognition-emotion-happy": "Счастье",
+        "face-recognition-emotion-shocked": "Шок",
     }
 };
 let lang = localStorage.getItem('lang') || 'en' // Загрузка сохраненного языка из localStorage или установка значения по умолчанию 'en'
